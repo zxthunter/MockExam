@@ -1,0 +1,336 @@
+define(function(require){
+	var $ = require("jquery");
+	var justep = require("$UI/system/lib/justep");
+	
+	var Model = function(){
+		this.callParent();
+	};
+	
+	var styleTree;
+	Model.prototype.button1Click = function(event){
+		this.comp("contents1").to(0);
+	};
+
+	Model.prototype.button2Click = function(event){
+		this.comp("contents1").to(1);
+	};
+
+	Model.prototype.button3Click = function(event){
+		this.comp("contents1").to(2);
+	};
+
+
+	
+
+	//计算时间函数
+	Model.prototype.calTime = function(time){
+		var second = time % 60;
+		var minute = ((time - second) % 3600)/60;
+		var hour = (time -minute*60-second)/3600;
+		if (hour<10) hour = "0"+hour;
+		if (minute<10) minute = "0"+minute;
+		if (second<10) second = "0"+second;
+		return "剩余时间："+hour+":"+minute+":"+second;
+		
+	}
+	
+//点击开始考试按钮
+	Model.prototype.button5Click = function(event){
+		var self = this;
+		var lauchData = this.comp("launchData");
+		var indexArr = [];
+		indexArr[0] = lauchData.getValue("first");
+		indexArr[1] = lauchData.getValue("second");
+		indexArr[2] = lauchData.getValue("third");
+		indexArr[3] = lauchData.getValue("fourth");
+//		console.log(styleTree);
+		var success = function(xhr){
+			if (xhr.retCode == "0000"){
+				self.comp("windowDialog1").open({"data":xhr});
+			}
+			$(self.getElementByXid("div2")).hide();
+		}
+		
+		if (indexArr[0] && indexArr[1] && indexArr[2] && indexArr[3]){
+			var majorId;
+			var subTree = styleTree;
+			for (var i = 0; i<4; i++){
+				var obj = subTree[indexArr[i]];
+				if (obj.leef) {
+					majorId = obj.majorId;
+					break;
+				}
+				subTree = obj.children;
+			}
+			
+			var studentId = this.comp("totalData").getValue("studentId");
+			console.log(majorId);
+			console.log(studentId);
+			$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"data":{"majorId": majorId,
+						"studentId":studentId,
+						"assessmentNature":indexArr[3]
+				},
+				"url" : "http://61.178.20.12/mock/api/exam/paper.json",
+				"success" : success
+				}
+				);
+			$(self.getElementByXid("div2")).show();
+		}
+		
+				
+		
+	};
+
+
+	
+
+	Model.prototype.changeLongToString = function(num){
+		var date = new Date(num);
+		var month = date.getMonth()+1;
+		var day = date.getDate();
+		var year = date.getFullYear();
+		return year+"-"+month+"-"+day ;
+	}
+	
+//向后台发送请求，获得树形结构
+	Model.prototype.data1Create = function(event){
+	var self = this;
+	var success = function(xhr){
+		styleTree = xhr;
+		var node = self.comp("firstNode");
+		node.clear();
+		for (var i=0; i<xhr.length; i++){
+			var name = xhr[i].name;
+			var isLeef = xhr[i].leef;
+			node.newData();
+			node.setValue("_id", i);
+			node.setValue("name", name);
+		}
+	}
+		$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"url" : "http://61.178.20.12/mock/api/major/tree/nodes.json",
+				"success" : success
+				}
+				);
+	};
+
+
+
+	Model.prototype.select1Change = function(event){
+		var launchData = this.comp("launchData");
+		var node = this.comp("secondNode");
+		node.clear();
+		this.comp("thirdNode").clear();
+//		this.comp("fourthData").clear();
+		if (!(styleTree[event.value].leef)){
+			var objArr = styleTree[event.value].children;
+			for (var i=0; i<objArr.length; i++) {
+				var name = objArr[i].name;
+				var isLeef = objArr[i].leef;
+				node.newData();
+				node.setValue("_id", i);
+				node.setValue("name", name);
+			}		
+		}
+		
+	};
+
+	
+
+	Model.prototype.select3Change = function(event){
+		var launchData = this.comp("launchData");
+		var first = launchData.getValue("first");
+		var second = launchData.getValue("second");
+		var node = this.comp("thirdNode");
+		node.clear();
+		if (!(((styleTree[first].children)[second]).leef)){
+			($(this.getElementsByXid("div8"))).show();
+			var objArr = ((styleTree[first].children)[second]).children;
+			for (var i=0; i<objArr.length; i++) {
+				var name = objArr[i].name;
+				var isLeef = objArr[i].leef;
+				node.newData();
+				node.setValue("_id", i);
+				node.setValue("name", name);
+			}		
+		}
+		else {
+			($(this.getElementsByXid("div8"))).hide();
+		}
+	};
+	
+
+//向后台发送请求，获取学生基本资料
+	Model.prototype.totalDataCustomRefresh = function(event){
+			var data = this.comp("totalData")
+			var success = function(xhr){
+			console.log(xhr);
+			data.newData();
+			data.setValue("studentId", xhr.studentId);
+			data.setValue("name", xhr.name);
+			data.setValue("mobile",xhr.mobile);
+			data.setValue("totalMocks", xhr.totalMocks);
+			data.setValue("availableMocks",xhr.availableMocks);
+			data.setValue("completedMocks",xhr.completedMocks);
+			//console.log(data.getValue("studentId"));
+			}
+		
+		
+		$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"data":{"mobile":134},
+				"url" : "http://61.178.20.12/mock/api/student/info.json",
+				"success" : success
+				}
+				);
+	};
+	
+
+//接管列表数据的更新
+	Model.prototype.examDataCustomRefresh = function(event){
+		var self = this;
+		var index;
+		var data = this.comp("examData");
+		var success = function(xhr){
+			console.log(xhr);
+			data.clear();
+			for (var i=0; i<xhr.length; i++){
+				var examObj = xhr[i];
+				var studentExamObj = examObj.studentExam;
+				data.newData();
+				data.setValue("_id",i);
+				data.setValue("examId",studentExamObj.examId);
+				data.setValue("majorId",examObj.majorId);
+				data.setValue("assessmentNature", examObj.assessmentNature);
+				data.setValue("examName",examObj.title);
+				data.setValue("examScore",studentExamObj.examScore);
+				data.setValue("examStatus",studentExamObj.examStatus);
+				data.setValue("examDate",studentExamObj.examDate);	
+			}
+			
+			//跳转到继续考试页面的函数
+			var againFunction = function(){
+				
+				var data = self.comp("examData");
+				var majorId = data.getValueByID("majorId",index);
+				var studentId = self.comp("totalData").getValue("studentId");
+				var assessmentNature = data.getValueByID("assessmentNature",index);
+				
+				var success = function(xhr){
+					if (xhr.retCode == "0000"){
+						self.comp("windowDialog1").open({"data":xhr});
+						$(self.getElementByXid("div2")).hide();
+					}
+				}
+				
+				$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"data":{"majorId": majorId,
+						"studentId":studentId,
+						"assessmentNature":assessmentNature
+				},
+				"url" : "http://61.178.20.12/mock/api/exam/paper.json",
+				"success" : success
+				}
+				);
+				$(self.getElementByXid("div2")).show();
+			}
+			
+			//跳转到查看试卷的函数
+			var checkFunction = function(event){
+			
+				var examId = data.getValueByID("examId", event.data.index);
+				var success = function (xhr){
+					if (xhr.retCode == "0000"){
+						self.comp("windowDialog2").open({"data":xhr});
+						$(self.getElementByXid("div2")).hide();
+					}
+				}
+				
+				$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"data":{"examId":examId
+				},
+				"url" : "http://61.178.20.12/mock/api/exam/view.json",
+				"success" : success
+				}
+				);
+				$(self.getElementByXid("div2")).show();
+			}
+			
+			
+			var ulChildren = $(self.getElementByXid("listTemplateUl2")).context.children;
+			for (var i=0; i<xhr.length; i++){
+				var li = ulChildren[i];
+				var button = li.getElementsByTagName("a")[0];
+				var examStatus = data.getValueByID("examStatus", i);
+				if (examStatus == 1){
+					$(button).removeClass("btn-success");
+					$(button).addClass("btn-default");
+					var span = button.getElementsByTagName("span")[0];
+					$(span).removeClass("glyphicon-eye-open");
+					$(span).addClass("glyphicon-pencil");
+					$(button).bind("click",againFunction);
+					
+					var examObj = xhr[i];
+					var studentExamObj = examObj.studentExam;
+					var beginDate = new Date(studentExamObj.examDate);
+					var nowDate = new Date();
+					var interval = justep.Date.diff(beginDate, nowDate, 's');
+					var remainTime = examObj.duration*60-interval;
+					data.setValueByID("remainTime", remainTime, i);
+					index = i;
+					var secondDiv = li.getElementsByTagName("div")[3];
+					$(li.getElementsByTagName("div")[9]).addClass("no_display");
+					var timeDiv = secondDiv.getElementsByTagName("div")[3];
+					if (data.getValueByID("remainTime", index)){
+						var startTimer = function () {
+							var time = data.getValueByID("remainTime",index);
+							timeDiv.innerText = self.calTime(time);
+							time--;
+							data.setValueByID("remainTime",time,index);
+							setTimeout(startTimer,1000);
+							}
+						startTimer();
+						
+					}
+					
+					
+				}
+				else if (examStatus == 3){
+					
+					$(button).bind("click",{'index': i},checkFunction);
+					
+				}
+			}
+			
+			
+		}
+		$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"data":{"mobile":134},
+				"url" : "http://61.178.20.12/mock/api/exam/completed.json",
+				"success" : success
+				}
+				);
+	};
+	
+
+
+	return Model;
+});

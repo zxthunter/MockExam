@@ -1,0 +1,39 @@
+define(function(require){
+	var $ = require("jquery");
+	var justep = require("$UI/system/lib/justep");
+	require("$UI/AppTest/jquery.md5");
+	var Model = function(){
+		this.callParent();
+	};
+//点击登陆事件
+	Model.prototype.button1Click = function(event){
+	var self = this;
+	var mobile = this.comp("loginData").getValue("mobile");
+	var password = this.comp("loginData").getValue("password");
+	var success = function(xhr){
+		console.log(xhr);
+		var isSuccess = xhr.success;
+		if (isSuccess){
+			self.comp("windowDialog1").open();
+		}else{
+			
+		}
+	}
+	var hash = $.md5(password);
+		$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"url" : "http://61.178.20.12/open/candidate.htm",
+				"data" : { 
+					"id":mobile,
+					"password":hash
+					},
+				"success" : success
+				}
+				);
+				
+	};
+
+	return Model;
+});

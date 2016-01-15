@@ -1,0 +1,27 @@
+.listClass {
+	margin:5px 0px 8px 0px;
+	width: 97%;
+	position: absolute;
+	left: 1%
+}
+.listInnerClass {
+	margin:8px 7px 1px 2px; 
+	border: 1px solid #cee3e9;
+	box-shadow:5px 5px 5px #777777;
+	border-radius: 10px
+}
+._listInnerClass {
+	margin:8px 7px 1px 2px; 
+	border: 1px solid red;
+	box-shadow:5px 5px 5px #777777;
+	border-radius: 10px
+}
+.optionOutput{
+	padding:0px 0px 0px 7px;
+}
+.contentOutput {
+	padding :5px 3px 0px 5px;
+}
+.answerOutput{
+	padding:0px 0px 5px 10px;
+}

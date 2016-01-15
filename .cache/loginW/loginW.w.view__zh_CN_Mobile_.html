@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window LoginBG" component="$model/UI2/system/components/justep/window/window" design="device:mobile" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __justepbasexid__="__baseID__" components="$model/UI2/system/components/justep/labelEdit/labelEdit,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/input/password,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/input/input,">
+  <script xmlns="">window.__justep.__ResourceEngine.loadCss([{url:'/$v29d414d2cf47498c9d11ee565a2c675f$lzh_CN$s$d/UI2/AppTest/loginW.css', include:'$model/UI2/AppTest/loginW.css'}]);</script>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}"/>  
+  <span xmlns="" component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/AppTest/mainW.w&quot;}"> 
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay"></div>  
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog" style="display:none;">  
+      <div class="x-dialog-title"> 
+        <button class="close"> 
+          <span>×</span> 
+        </button>  
+        <div class="x-dialog-title-text"/> 
+      </div>  
+      <div class="x-dialog-body"/> 
+    </div> 
+  </span>  
+  <div xmlns="" xid="div3" class="LoginBG"> 
+    <div xid="div1" class="LoginViewClass"> 
+      <h1 xid="h11" class="titleViewClass"> 
+        <img src="@justepContextPath@/$v4f4d749208cf44338169d96b6acd8092$lzh_CN$s$d/UI2/AppTest/logo-yunnan.png" alt="" class="imageClass" xid="image1"/>全国安全培训信息管理平台
+      </h1>  
+      <div xid="div2" class="loginRegister"> 
+        <div xid="div4" class="warningDiv"> 
+          <span xid="span2" class="glyphicon glyphicon-remove wrong"> 
+            <strong>用户名密码输入错误</strong> 
+          </span> 
+        </div>  
+        <div xid="div8" class="warningDiv"> 
+          <span xid="span2" class="glyphicon glyphicon-link warning"> 
+            <strong>请检查网络连接</strong> 
+          </span> 
+        </div>  
+        <div xid="div7" class="loginDIV"> 
+          <div xid="div5" class="loginLabel"> 
+            <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label35" xid="labelInput1" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}"> 
+              <label class="x-label" xid="label1">用户名：</label>  
+              <input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit" xid="input1" data-bind="component:{ref:loginData.ref('mobile'),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;placeHolder&quot;:&quot;请输入手机号&quot;}"/> 
+            </div> 
+          </div>  
+          <div xid="div6" class="loginLabel"> 
+            <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label35" xid="labelPassword1" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}"> 
+              <label class="x-label" xid="label2">密码：</label>  
+              <input component="$model/UI2/system/components/justep/input/password" class="form-control x-edit" xid="password1" type="password" data-bind="component:{ref:loginData.ref('password'),name:'$model/UI2/system/components/justep/input/password'}" data-config="{&quot;placeHolder&quot;:&quot;请输入密码&quot;}"/> 
+            </div> 
+          </div> 
+        </div>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-success loginButton" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button1Click" data-config="{&quot;label&quot;:&quot;登陆&quot;}"> 
+          <i xid="i1"/>  
+          <span xid="span1">登陆</span> 
+        </a> 
+      </div> 
+    </div> 
+  </div> 
+</div>

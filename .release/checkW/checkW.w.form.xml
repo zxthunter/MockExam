@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window" component="$model/UI2/system/components/justep/window/window" design="device:mobile" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __justepbasexid__="__baseID__" components="$model/UI2/system/components/justep/windowReceiver/windowReceiver,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/output/output," css="$model/UI2/AppTest/checkW.css,">  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}"></div>  
+  <span component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver2" style="left:44px;top:56px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiver10Receive"/>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}"> 
+    <div class="x-panel-top" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}">
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}"> 
+        <div class="x-titlebar-left" xid="div1">
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button2Click" data-config="{&quot;icon&quot;:&quot;icon-calendar&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+            <i xid="i2" class="icon-calendar"/>  
+            <span xid="span2"/>
+          </a>
+        </div>  
+        <div class="x-titlebar-title" xid="div2"/>  
+        <div class="x-titlebar-right " xid="div3">
+          <div class="empty"/>
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button1Click" data-config="{&quot;icon&quot;:&quot;icon-arrow-right-c&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+            <i xid="i1" class="icon-arrow-right-c"/>  
+            <span xid="span1"/>
+          </a>
+        </div>
+      </div>
+    </div>  
+    <div class="x-panel-content" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}">
+      <div component="$model/UI2/system/components/justep/list/list" class="x-list" xid="list2" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;paperData&quot;}"> 
+        <ul class="x-list-template hide" xid="listTemplateUl2" bind-foreach="{data:$model.foreach_list2($element),afterRender:$model.foreach_afterRender_list2.bind($model,$element)}"> 
+          <li xid="li2" class="listInnerClass"> 
+            <div component="$model/UI2/system/components/justep/output/output" class="x-output contentOutput" xid="output7" data-bind="component:{ref:ref('viewContent'),name:'$model/UI2/system/components/justep/output/output'}"/>
+            <div component="$model/UI2/system/components/justep/output/output" class="x-output optionOutput" xid="output8" data-bind="component:{ref:ref('options'),name:'$model/UI2/system/components/justep/output/output'}"/>
+            <div component="$model/UI2/system/components/justep/output/output" class="x-output answerOutput" xid="output9" data-bind="component:{ref:ref('viewAnswer'),name:'$model/UI2/system/components/justep/output/output'}"/>
+          </li>
+        </ul> 
+      </div> 
+    </div>  
+    <div xid="div4" class="showTitleClass"> 
+      <div xid="div5" class="showTitleInnerClass">
+        <div component="$model/UI2/system/components/justep/output/output" class="x-output outputClass" xid="output1" data-bind="component:{ref:totalData.ref('viewName'),name:'$model/UI2/system/components/justep/output/output'}"/>
+        <div component="$model/UI2/system/components/justep/output/output" class="x-output outputClass" xid="output2" data-bind="component:{ref:totalData.ref('viewScore'),name:'$model/UI2/system/components/justep/output/output'}"/>
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default checkButton" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button3Click" data-config="{&quot;label&quot;:&quot;查看试卷&quot;}"> 
+          <i xid="i3"/>  
+          <span xid="span3">查看试卷</span>
+        </a> 
+      </div>
+    </div>
+    <style>.x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div>
+</div>

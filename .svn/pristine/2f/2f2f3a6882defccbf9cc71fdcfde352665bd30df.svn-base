@@ -1,0 +1,44 @@
+.listClass {
+	margin:5px 0px 8px 0px;
+	width: 97%;
+	position: absolute;
+	left: 1%
+}
+.listInnerClass {
+	margin:8px 7px 1px 2px; 
+	border: 1px solid #cee3e9;
+	box-shadow:5px 5px 5px #777777;
+	border-radius: 10px
+}
+
+.listInnerMiddleLineLeft {
+	width:30%;
+	heidht:80%
+}
+
+.secondViewClass {
+	width:80%;
+	height:84%;
+	position:absolute;
+	left:10%;
+	top:8%
+}
+.secondViewInnerClass {
+	width:95%;
+	height:20%;
+	margin:2% 0px 2% 0px;
+}
+
+.thirdViewClass {
+	width:80%;
+	height:84%;
+	position:absolute;
+	left:10%;
+	top:8%
+}
+.selection{
+	width:80%
+}
+.no_display{
+	visibility:hidden;
+}

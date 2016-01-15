@@ -1,0 +1,114 @@
+define(function(require){
+	var $ = require("jquery");
+	var justep = require("$UI/system/lib/justep");
+	
+	var Model = function(){
+		this.callParent();
+	};
+var optionConstant = ["A","B","C","D"];
+var isfinishLoad =false;
+	Model.prototype.windowReceiver10Receive = function(event){
+		var xhr = this.comp("windowReceiver2").getReceiveData();
+		
+		//解析问题
+		var questions = xhr.questions;
+		var data = this.comp("paperData");
+		for (var i=0; i<questions.length; i++){
+			var question = questions[i];
+			var studentAnswer = question.studentAnswer;
+			data.newData();
+			data.setValue("_id", i);
+			data.setValue("content", question.content);
+			data.setValue("questionType", question.questionType);
+			data.setValue("questionTypeName", question.questionTypeName);
+			if (studentAnswer){
+				if (question.questionType == 3){
+					data.setValue("options", "A、正确&nbsp&nbsp&nbsp B、不正确");
+					if (question.judgeCorrect){
+						data.setValue("correctAnswer",0);
+					}
+					else {
+						data.setValue("correctAnswer",1);
+					}
+					if (studentAnswer.answer == "true"){
+						data.setValue("studentAnswer",0);
+					}
+					else if (studentAnswer.answer == "false"){
+						data.setValue("studentAnswer",1);
+					}
+					data.setValue("isCorrect",studentAnswer.correct);
+				} 
+				else if (question.questionType == 1){
+					data.setValue("isCorrect",studentAnswer.correct);
+					var answerCode = studentAnswer.answer;
+					var options = "";
+					var optionsObj = question.options;
+					for (var j = 0; j<optionsObj.length; j++){
+						var optionObj = optionsObj[j];
+						if (optionObj.correct) {
+							data.setValue("correctAnswer",j);
+						}
+						if (answerCode == optionObj.optionId){
+							data.setValue("studentAnswer",j);
+						}
+						options =  options + optionConstant[j]+ "、" + optionObj.content + "<br/>";
+					}
+					data.setValue("options",options);
+				}
+			}
+			else {
+				data.setValue("isCorrect",false);
+				if (question.questionType == 3){
+					data.setValue("options", "A、正确 &nbsp&nbsp&nbspB、不正确");
+					if (question.judgeCorrect){
+						data.setValue("correctAnswer",0);
+					}
+					else {
+						data.setValue("correctAnswer",1);
+					}
+				} 
+				else if (question.questionType == 1){
+					var options = "";
+					var optionsObj = question.options;
+					for (var j = 0; j<optionsObj.length; j++){
+						var optionObj = optionsObj[j];
+						if (optionObj.correct) {
+							data.setValue("correctAnswer",j);
+						}
+						options =  options + optionConstant[j]+ "、" + optionObj.content+ "<br/>";
+					}
+					data.setValue("options",options);
+				}
+			}	
+		}
+		isfinishLoad = true;
+	};
+	
+	Model.prototype.calAnswer = function(cAs,sAs){
+		var cSt = optionConstant[cAs];
+		var sSt;
+		if (sAs){
+			sSt = optionConstant[sAs];
+		} 
+		else {
+			var sSt = "无";
+		}
+		return "正确答案:"+cSt+"&nbsp&nbsp&nbsp"+"考生答案:"+sSt;
+	}
+	
+	Model.prototype.paperDataAfterRefresh = function(event){
+		if (isfinishLoad){
+			var lis = this.getElementsByXid("li2");
+			var data = this.comp("paperData");
+			for (var i=0; i<data.length; i++){
+				var isCorrect = data.getValueByID("isCorrect", i);
+				if (!isCorrect){
+					$(lis[i]).removeClass("listInnerClass");
+					$(lis[i]).addClass("_listInnerClass");
+				}
+			}
+		}
+	};
+	
+	return Model;
+});

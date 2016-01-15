@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window" component="$model/UI2/system/components/justep/window/window" design="device:mobile" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __justepbasexid__="__baseID__" components="$model/UI2/system/components/justep/windowReceiver/windowReceiver,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/select/radioGroup,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/button/radio,$model/UI2/system/components/justep/wing/child,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/wing/wing,$model/UI2/system/components/justep/output/output,">
+  <script xmlns="">window.__justep.__ResourceEngine.loadCss([{url:'/$vc21b0ca89fff4d92973015f03cf88f63$lzh_CN$sdesktop$d/UI2/AppTest/examW.css', include:'$model/UI2/AppTest/examW.css'}]);</script>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}"/>  
+  <span xmlns="" component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver1" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiver1Receive"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/wing/wing" class="x-wing" xid="wing1" data-bind="component:{name:'$model/UI2/system/components/justep/wing/wing'}" data-config="{&quot;display&quot;:&quot;push&quot;}"> 
+    <div class="x-wing-left bg-success" xid="left1" component="$model/UI2/system/components/justep/wing/child" data-bind="component:{name:'$model/UI2/system/components/justep/wing/child'}"/>  
+    <div class="x-wing-content" xid="content1" component="$model/UI2/system/components/justep/wing/child" data-bind="component:{name:'$model/UI2/system/components/justep/wing/child'}"> 
+      <div class="x-wing-backdrop" xid="div1"/>  
+      <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p53c991cb68114844b627f4632c981433-iosstatusbar" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}"> 
+        <div class="x-panel-top" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"> 
+          <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar bg-success" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}"> 
+            <div class="x-full bg-success" xid="div2"> 
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-success btn-only-icon" style="position:relative; left:10px; top:5px" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button2Click" data-config="{&quot;icon&quot;:&quot;icon-android-note&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+                <i xid="i2" class="icon-android-note"/>  
+                <span xid="span2"/> 
+              </a>  
+              <div xid="div3" style="float:right; right:2px;width:150px;"> 
+                <div component="$model/UI2/system/components/justep/output/output" class="glyphicon glyphicon-time x-output timeColor" xid="output1" style="width:150px; float:right;" data-bind="component:{ref:totalData.ref('calRemainTime'),name:'$model/UI2/system/components/justep/output/output'}"/> 
+              </div> 
+            </div> 
+          </div> 
+        </div>  
+        <div class="x-panel-content" xid="content2" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"> 
+          <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full" xid="contents1" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-events="onActiveChange:contents1ActiveChange" data-config="{&quot;routable&quot;:true}"> 
+            <div class="x-contents-content active active" xid="content2" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}"> 
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-lg btn-icon-right btn-only-icon" xid="button5" style="position:absolute; top:38%; right:0px; float:right" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},disable:$model.questionData.val(&quot;_id&quot;)== $model.totalData.val(&quot;totalQuestionNum&quot;)" data-events="onClick:buttonNext" data-config="{&quot;icon&quot;:&quot;icon-chevron-right&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+                <i xid="i5" class="icon-chevron-right"/>  
+                <span xid="span5"/> 
+              </a>  
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-lg btn-icon-left btn-only-icon" xid="button3" style="position:absolute; top:38%; left:0px" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},disable:$model.questionData.val(&quot;_id&quot;)=='1'" data-events="onClick:buttonPrev" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+                <i xid="i3" class="icon-chevron-left"/>  
+                <span xid="span3"/> 
+              </a>  
+              <div xid="div6" style="width:60%; position:absolute; top:32%; right:18%; left:18%"> 
+                <div component="$model/UI2/system/components/justep/output/output" class="x-output" xid="output2" data-bind="component:{ref:questionData.ref('viewQuestion'),name:'$model/UI2/system/components/justep/output/output'}"/>  
+                <span component="$model/UI2/system/components/justep/select/radioGroup" class="x-radio-group" xid="radioGroup1" data-bind="component:{ref:questionData.ref('answer'),name:'$model/UI2/system/components/justep/select/radioGroup'},foreach:{data:nowSelectionData.datas,afterRender:$model.comp($element)['_doUpdate'].bind($model.comp($element))}"> 
+                  <span xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/button/radio" class="x-radio" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio',value:ref('answer'),label:ref('answer')}">  
+                    <input type="radio"/>  
+                    <label/> 
+                  </span> 
+                </span> 
+              </div> 
+            </div>  
+            <div class="x-contents-content" xid="content4" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}"> 
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-lg btn-icon-left btn-only-icon" xid="button7" style="position:absolute; top:38%; left:0px" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},disable:$model.questionData.val(&quot;_id&quot;)=='1'" data-events="onClick:buttonPrev" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;button&quot;,&quot;target&quot;:&quot;content2&quot;}"> 
+                <i xid="i7" class="icon-chevron-left"/>  
+                <span xid="span7"/> 
+              </a>  
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-lg btn-icon-right btn-only-icon" xid="button6" style="position:absolute; top:38%; right:0px; float:right" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},disable:$model.questionData.val(&quot;_id&quot;)== $model.totalData.val(&quot;totalQuestionNum&quot;)" data-events="onClick:buttonNext" data-config="{&quot;icon&quot;:&quot;icon-chevron-right&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+                <i xid="i6" class="icon-chevron-right"/>  
+                <span xid="span6"/> 
+              </a>  
+              <div xid="div7" style="width:60%; position:absolute; top:32%; right:18%; left:18%"> 
+                <div component="$model/UI2/system/components/justep/output/output" class="x-output" xid="output2" data-bind="component:{ref:questionData.ref('viewQuestion'),name:'$model/UI2/system/components/justep/output/output'}"/>  
+                <span component="$model/UI2/system/components/justep/select/radioGroup" class="x-radio-group" xid="radioGroup3" data-bind="component:{ref:questionData.ref('answer'),name:'$model/UI2/system/components/justep/select/radioGroup'},foreach:{data:nowSelectionData.datas,afterRender:$model.comp($element)['_doUpdate'].bind($model.comp($element))}"> 
+                  <span xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/button/radio" class="x-radio" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio',value:ref('answer'),label:ref('answer')}">  
+                    <input type="radio"/>  
+                    <label/> 
+                  </span> 
+                </span> 
+              </div> 
+            </div>  
+            <div class="x-contents-content" xid="content3" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}"> 
+              <div xid="div8" class="welcomeClass"> 
+                <div component="$model/UI2/system/components/justep/output/output" class="x-output titleClass" xid="output3" data-bind="component:{ref:totalData.ref('title'),name:'$model/UI2/system/components/justep/output/output'}"/>  
+                <a component="$model/UI2/system/components/justep/button/button" class="btn x-green btn-lg beginButton" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button4Click" data-config="{&quot;label&quot;:&quot;开始考试&quot;}"> 
+                  <i xid="i4"/>  
+                  <span xid="span4">开始考试</span> 
+                </a> 
+              </div> 
+            </div> 
+          </div> 
+        </div>  
+        <div xid="div4" style="position:absolute;  bottom:0px; width:100%" class="bg-success xui-hignlight-selected x-scroll-view"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-success btn-xs btn-only-icon" xid="button1" style="width:100%" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button1Click" data-config="{&quot;icon&quot;:&quot;icon-chevron-up&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+            <i xid="i1" class="icon-chevron-up"/>  
+            <span xid="span1"/> 
+          </a>  
+          <div style="width:100%; height:100px; display:none; overflow:scroll" xid="div5" class="x-scroll-content bg-success"/> 
+        </div>  
+        <style>.x-panel.p53c991cb68114844b627f4632c981433-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p53c991cb68114844b627f4632c981433-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p53c991cb68114844b627f4632c981433-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p53c991cb68114844b627f4632c981433-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p53c991cb68114844b627f4632c981433-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p53c991cb68114844b627f4632c981433-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p53c991cb68114844b627f4632c981433-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+      </div> 
+    </div> 
+  </div> 
+</div>

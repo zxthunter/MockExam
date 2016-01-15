@@ -1,0 +1,220 @@
+define(function(require){
+	var $ = require("jquery");
+	var justep = require("$UI/system/lib/justep");
+	
+	var Model = function(){
+		this.callParent();
+	};
+	
+	var styleTree;
+	Model.prototype.button1Click = function(event){
+		this.comp("contents1").to(0);
+	};
+
+	Model.prototype.button2Click = function(event){
+		this.comp("contents1").to(1);
+	};
+
+	Model.prototype.button3Click = function(event){
+		this.comp("contents1").to(2);
+	};
+
+
+	
+
+	
+
+	
+//点击开始考试按钮
+	Model.prototype.button5Click = function(event){
+		var self = this;
+		var lauchData = this.comp("launchData");
+		var indexArr = [];
+		indexArr[0] = lauchData.getValue("first");
+		indexArr[1] = lauchData.getValue("second");
+		indexArr[2] = lauchData.getValue("third");
+		indexArr[3] = lauchData.getValue("fourth");
+//		console.log(styleTree);
+		var success = function(xhr){
+			if (xhr.retCode == "0000"){
+				self.comp("windowDialog1").open({"data":xhr});
+			}
+		}
+		
+		if (indexArr[0] && indexArr[1] && indexArr[2] && indexArr[3]){
+			var majorId;
+			var subTree = styleTree;
+			for (var i = 0; i<4; i++){
+				var obj = subTree[indexArr[i]];
+				if (obj.leef) {
+					majorId = obj.majorId;
+					break;
+				}
+				subTree = obj.children;
+			}
+			
+			var studentId = this.comp("totalData").getValue("studentId");
+			console.log(majorId);
+			console.log(studentId);
+			$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"data":{"majorId": majorId,
+						"studentId":studentId,
+						"assessmentNature":indexArr[3]
+				},
+				"url" : "http://61.178.20.12/mock/api/exam/paper.json",
+				"success" : success
+				}
+				);
+				
+		}
+		
+				
+		
+	};
+
+
+	
+
+	Model.prototype.changeLongToString = function(num){
+		var date = new Date(num);
+		var month = date.getMonth()+1;
+		var day = date.getDate();
+		var year = date.getFullYear();
+		return year+"-"+month+"-"+day ;
+	}
+	
+//向后台发送请求，获得树形结构
+	Model.prototype.data1Create = function(event){
+	var self = this;
+	var success = function(xhr){
+		styleTree = xhr;
+		var node = self.comp("firstNode");
+		node.clear();
+		for (var i=0; i<xhr.length; i++){
+			var name = xhr[i].name;
+			var isLeef = xhr[i].leef;
+			node.newData();
+			node.setValue("_id", i);
+			node.setValue("name", name);
+		}
+	}
+		$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"url" : "http://61.178.20.12/mock/api/major/tree/nodes.json",
+				"success" : success
+				}
+				);
+	};
+
+
+
+	Model.prototype.select1Change = function(event){
+		var launchData = this.comp("launchData");
+		var node = this.comp("secondNode");
+		node.clear();
+		this.comp("thirdNode").clear();
+//		this.comp("fourthData").clear();
+		if (!(styleTree[event.value].leef)){
+			var objArr = styleTree[event.value].children;
+			for (var i=0; i<objArr.length; i++) {
+				var name = objArr[i].name;
+				var isLeef = objArr[i].leef;
+				node.newData();
+				node.setValue("_id", i);
+				node.setValue("name", name);
+			}		
+		}
+		
+	};
+
+	
+
+	Model.prototype.select3Change = function(event){
+		var launchData = this.comp("launchData");
+		var first = launchData.getValue("first");
+		var second = launchData.getValue("second");
+		var node = this.comp("thirdNode");
+		node.clear();
+		if (!(((styleTree[first].children)[second]).leef)){
+			($(this.getElementsByXid("div8"))).show();
+			var objArr = ((styleTree[first].children)[second]).children;
+			for (var i=0; i<objArr.length; i++) {
+				var name = objArr[i].name;
+				var isLeef = objArr[i].leef;
+				node.newData();
+				node.setValue("_id", i);
+				node.setValue("name", name);
+			}		
+		}
+		else {
+			($(this.getElementsByXid("div8"))).hide();
+		}
+	};
+	
+
+//向后台发送请求，获取学生基本资料
+	Model.prototype.totalDataCustomRefresh = function(event){
+			var data = this.comp("totalData")
+			var success = function(xhr){
+			console.log(xhr);
+			data.newData();
+			data.setValue("studentId", xhr.studentId);
+			data.setValue("name", xhr.name);
+			data.setValue("mobile",xhr.mobile);
+			data.setValue("totalMocks", xhr.totalMocks);
+			data.setValue("availableMocks",xhr.availableMocks);
+			data.setValue("completedMocks",xhr.completedMocks);
+			//console.log(data.getValue("studentId"));
+			}
+		
+		
+		$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"data":{"mobile":134},
+				"url" : "http://61.178.20.12/mock/api/student/info.json",
+				"success" : success
+				}
+				);
+	};
+	
+
+//接管列表数据的更新
+	Model.prototype.examDataCustomRefresh = function(event){
+		var data = this.comp("examData");
+		var success = function(xhr){
+			console.log(xhr);
+			data.clear();
+			for (var i=0; i<xhr.length; i++){
+				var examObj = xhr[i];
+				var studentExamObj = examObj.studentExam;
+				data.newData();
+				data.setValue("examId",studentExamObj.examId);
+				data.setValue("examName",examObj.title);
+				data.setValue("examScore",studentExamObj.examScore);
+				data.setValue("examStatus",studentExamObj.examStatus);
+				data.setValue("examDate",studentExamObj.examDate);	
+				//console.log(new Date(data.getValue("examDate")));
+			}
+		}
+		$.ajax({
+				"type" : "post",
+				"async" : true,
+				"dataType" : "json",
+				"data":{"mobile":134},
+				"url" : "http://61.178.20.12/mock/api/exam/completed.json",
+				"success" : success
+				}
+				);
+	};
+	
+
+
+	return Model;
+});

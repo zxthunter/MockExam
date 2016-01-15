@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window" component="$model/UI2/system/components/justep/window/window" design="device:mobile" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __justepbasexid__="__baseID__" components="$model/UI2/system/components/justep/labelEdit/labelEdit,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/input/input," css="$model/UI2/AppTest/login_1W.css,">  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}"/>  
+  <div xid="div3" class="LoginBG"> 
+    <div xid="div1" class="LoginViewClass"> 
+      <h1 xid="h11" class="titleViewClass">
+        <div xid="div4" class="headerLogo"/>全国安全培训信息管理平台
+      </h1>  
+      <div xid="div2" class="loginRegister"> 
+        <div xid="div7" class="loginDIV"> 
+          <div xid="div5" class="loginLabel"> 
+            <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label35" xid="labelInput1" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}"> 
+              <label class="x-label" xid="label1">用户名：</label>  
+              <input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit" xid="input1" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}"/>
+            </div> 
+          </div>  
+          <div xid="div6" class="loginLabel"> 
+            <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label35" xid="labelInput2" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}"> 
+              <label class="x-label" xid="label2">密码：</label>  
+              <input component="$model/UI2/system/components/justep/input/input" class="form-control x-edit" xid="input2" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}"/>
+            </div> 
+          </div> 
+        </div>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-success loginButton" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button1Click" data-config="{&quot;label&quot;:&quot;登陆&quot;}"> 
+          <i xid="i1"/>  
+          <span xid="span1">登陆</span>
+        </a> 
+      </div> 
+    </div> 
+  </div>
+</div>

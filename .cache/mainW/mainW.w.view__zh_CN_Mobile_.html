@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window" component="$model/UI2/system/components/justep/window/window" design="device:mobile" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __justepbasexid__="__baseID__" components="$model/UI2/system/components/justep/labelEdit/labelEdit,$model/UI2/system/components/justep/windowReceiver/windowReceiver,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/button/buttonGroup,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/messageDialog/messageDialog,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/output/output,">
+  <script xmlns="">window.__justep.__ResourceEngine.loadCss([{url:'/$vdc41681ef8a145ba915de43c5e1254a7$lzh_CN$s$d/UI2/AppTest/mainW.css', include:'$model/UI2/AppTest/mainW.css'}]);</script>  
+  <span xmlns="" component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" style="top:9px;left:96px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/AppTest/examW.w&quot;}"> 
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay"></div>  
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog" style="display:none;">  
+      <div class="x-dialog-title"> 
+        <button class="close"> 
+          <span>×</span> 
+        </button>  
+        <div class="x-dialog-title-text"/> 
+      </div>  
+      <div class="x-dialog-body"/> 
+    </div> 
+  </span>  
+  <span xmlns="" component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog2" style="left:137px;top:5px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/AppTest/checkW.w&quot;}"> 
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay"></div>  
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog" style="display:none;">  
+      <div class="x-dialog-title"> 
+        <button class="close"> 
+          <span>×</span> 
+        </button>  
+        <div class="x-dialog-title-text"/> 
+      </div>  
+      <div class="x-dialog-body"/> 
+    </div> 
+  </span>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}"/>  
+  <span xmlns="" component="$model/UI2/system/components/justep/messageDialog/messageDialog" xid="messageDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/messageDialog/messageDialog'}" data-config="{&quot;message&quot;:&quot;您已经没有考试资格！&quot;,&quot;type&quot;:&quot;OK&quot;}"> 
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal-overlay"></div>  
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal">  
+      <div class="x-modal-inner"> 
+        <div class="x-modal-title"/>  
+        <div class="x-modal-text">您已经没有考试资格！</div>  
+        <input class="x-modal-prompt-input" type="text"/> 
+      </div>  
+      <div class="x-modal-buttons"> 
+        <a class="x-modal-button x-modal-button-bold OK" value="ok">确定</a>  
+        <a class="x-modal-button x-modal-button-bold Yes" value="yes">是</a>  
+        <a class="x-modal-button x-modal-button-bold No" value="no">否</a>  
+        <a class="x-modal-button x-modal-button-bold Cancel" value="cancel">取消</a> 
+      </div> 
+    </div> 
+  </span>  
+  <span xmlns="" component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver1" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiver1Receive"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pe39bb3be91374cf291e50611210b3ca0-iosstatusbar" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}"> 
+    <div class="x-panel-top" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}"> 
+        <p xid="p1" class="titleP"> 
+          <img src="@justepContextPath@/$ve6a6d0c1addb44daae987ae573e76fa0$lzh_CN$s$d/UI2/AppTest/logo-yunnan.png" alt="" class="imageClass" xid="image1"/>云南省安全培训模拟考试系统
+        </p> 
+      </div> 
+    </div>  
+    <div class="x-panel-content" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"> 
+      <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full" xid="contents1" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;swipe&quot;:false}"> 
+        <div class="x-contents-content active" xid="content2" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}"> 
+          <div component="$model/UI2/system/components/justep/list/list" class="x-list" xid="list2" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;examData&quot;}"> 
+            <ul class="x-list-template listClass hide" xid="listTemplateUl2" data-bind="foreach:{data:$model.foreach_list2($element),afterRender:$model.foreach_afterRender_list2.bind($model,$element)}"> 
+              <li xid="li2" class="listInnerClass"> 
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row" xid="row4" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}"> 
+                  <div class="x-col" xid="col12"> 
+                    <div component="$model/UI2/system/components/justep/output/output" class="x-output" xid="output8" data-bind="component:{ref:ref('calExamName'),name:'$model/UI2/system/components/justep/output/output'}"/> 
+                  </div> 
+                </div>  
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row" xid="row5" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}"> 
+                  <div class="x-col" xid="col14"> 
+                    <div component="$model/UI2/system/components/justep/output/output" class="x-output" xid="output9" data-bind="component:{ref:ref('calExamStatus'),name:'$model/UI2/system/components/justep/output/output'}"/> 
+                  </div>  
+                  <div class="x-col" xid="col15"> 
+                    <div component="$model/UI2/system/components/justep/output/output" class="x-output" xid="output10" data-bind="component:{ref:ref('calExamDate'),name:'$model/UI2/system/components/justep/output/output'}"/> 
+                  </div> 
+                </div>  
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row" xid="row6" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}"> 
+                  <div class="x-col" xid="col16"> 
+                    <div component="$model/UI2/system/components/justep/output/output" class="x-output" xid="output11" data-bind="component:{ref:ref('calExamScore'),name:'$model/UI2/system/components/justep/output/output'}"/> 
+                  </div>  
+                  <div class="x-col" xid="col18"> 
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-success btn-sm" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}"> 
+                      <span xid="span4" style="height:100% width:100%" class="glyphicon glyphicon-eye-open"/> 
+                    </a> 
+                  </div> 
+                </div> 
+              </li> 
+            </ul> 
+          </div> 
+        </div>  
+        <div class="x-contents-content" xid="content5" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}"> 
+          <div xid="div5" class="secondViewClass"> 
+            <div xid="div6" class="secondViewInnerClass"> 
+              <span xid="span9">资格类型：</span>  
+              <select component="$model/UI2/system/components/justep/select/select" class="form-control selection" xid="select1" data-bind="component:{ref:launchData.ref('first'),name:'$model/UI2/system/components/justep/select/select'},options:firstNode.datas,optionsValue:'_id',optionsText:'name',optionsAfterRender:$model.__justep__.selectOptionsAfterRender.bind($model,$element)" data-events="onChange:select1Change"/> 
+            </div>  
+            <div xid="div7" class="secondViewInnerClass"> 
+              <span xid="span6">作业类别：</span>  
+              <select component="$model/UI2/system/components/justep/select/select" class="form-control selection" xid="select2" data-bind="component:{ref:launchData.ref('second'),name:'$model/UI2/system/components/justep/select/select'},options:secondNode.datas,optionsValue:'_id',optionsText:'name',optionsAfterRender:$model.__justep__.selectOptionsAfterRender.bind($model,$element)" data-events="onChange:select3Change"/> 
+            </div>  
+            <div xid="div8" class="secondViewInnerClass"> 
+              <span xid="span7">准操项目：</span>  
+              <select component="$model/UI2/system/components/justep/select/select" class="form-control selection" xid="select3" data-bind="component:{ref:launchData.ref('third'),name:'$model/UI2/system/components/justep/select/select'},options:thirdNode.datas,optionsValue:'_id',optionsText:'name',optionsAfterRender:$model.__justep__.selectOptionsAfterRender.bind($model,$element)"/> 
+            </div>  
+            <div xid="div9" class="secondViewInnerClass"> 
+              <span xid="span8">考核性质：</span>  
+              <select component="$model/UI2/system/components/justep/select/select" class="form-control selection" xid="select4" style="width:100%;" data-bind="component:{ref:launchData.ref('fourth'),name:'$model/UI2/system/components/justep/select/select'},options:fourthData.datas,optionsValue:'_id',optionsText:'name',optionsAfterRender:$model.__justep__.selectOptionsAfterRender.bind($model,$element)"/> 
+            </div>  
+            <div xid="div4" class="secondViewInnerClass"> 
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-success launchButton" xid="button5" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button5Click" data-config="{&quot;label&quot;:&quot;获取试卷&quot;}"> 
+                <i xid="i4"/>  
+                <span xid="span5">获取试卷</span> 
+              </a> 
+            </div> 
+          </div> 
+        </div>  
+        <div class="x-contents-content" xid="content6" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}"> 
+          <div xid="div10" class="thirdViewClass"> 
+            <div xid="div11" class="secondViewInnerClass"> 
+              <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit" xid="labelOutput1" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}"> 
+                <label class="x-label" xid="label1">学生姓名：</label>  
+                <div component="$model/UI2/system/components/justep/output/output" class="x-output x-edit" xid="output1" data-bind="component:{ref:totalData.ref('name'),name:'$model/UI2/system/components/justep/output/output'}"/> 
+              </div> 
+            </div>  
+            <div xid="div12" class="secondViewInnerClass"> 
+              <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit" xid="labelOutput2" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}"> 
+                <label class="x-label" xid="label2">首次访问：</label>  
+                <div component="$model/UI2/system/components/justep/output/output" class="x-output x-edit" xid="output2" data-bind="component:{name:'$model/UI2/system/components/justep/output/output'}"/> 
+              </div> 
+            </div>  
+            <div xid="div13" class="secondViewInnerClass"> 
+              <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit" xid="labelOutput3" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}"> 
+                <label class="x-label" xid="label3">有效模考数：</label>  
+                <div component="$model/UI2/system/components/justep/output/output" class="x-output x-edit" xid="output3" data-bind="component:{ref:totalData.ref('availableMocks'),name:'$model/UI2/system/components/justep/output/output'}"/> 
+              </div> 
+            </div>  
+            <div xid="div14" class="secondViewInnerClass"> 
+              <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit" xid="labelOutput4" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}"> 
+                <label class="x-label" xid="label4">已完成模考数：</label>  
+                <div component="$model/UI2/system/components/justep/output/output" class="x-output x-edit" xid="output4" data-bind="component:{ref:totalData.ref('completedMocks'),name:'$model/UI2/system/components/justep/output/output'}"/> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-bottom" xid="bottom1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"> 
+      <div component="$model/UI2/system/components/justep/button/buttonGroup" class="btn-group x-card btn-group-justified" xid="buttonGroup1" data-bind="component:{name:'$model/UI2/system/components/justep/button/buttonGroup'}" data-config="{&quot;tabbed&quot;:true}"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-only-icon" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button1Click" data-config="{&quot;icon&quot;:&quot;icon-android-note&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+          <i xid="i1" class="icon-android-note"/>  
+          <span xid="span1"/> 
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-only-icon" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button2Click" data-config="{&quot;icon&quot;:&quot;icon-android-send&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+          <i xid="i2" class="icon-android-send"/>  
+          <span xid="span2"/> 
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-only-icon" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button3Click" data-config="{&quot;icon&quot;:&quot;icon-android-social-user&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+          <i xid="i3" class="icon-android-social-user"/>  
+          <span xid="span3"/> 
+        </a> 
+      </div> 
+    </div>  
+    <div xid="div2" class="_showTitleClass"> 
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-lg btn-only-icon" xid="button7" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-refreshing&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+        <i xid="i6" class="icon-refreshing"/>  
+        <span xid="span11"/> 
+      </a> 
+    </div>  
+    <style>.x-panel.pe39bb3be91374cf291e50611210b3ca0-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pe39bb3be91374cf291e50611210b3ca0-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pe39bb3be91374cf291e50611210b3ca0-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pe39bb3be91374cf291e50611210b3ca0-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pe39bb3be91374cf291e50611210b3ca0-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pe39bb3be91374cf291e50611210b3ca0-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pe39bb3be91374cf291e50611210b3ca0-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div> 
+</div>

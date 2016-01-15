@@ -1,0 +1,60 @@
+.addButton {
+	margin : 5px 4px;
+	width :40px;
+	height : 40px;
+	text-align:center;
+	font-size:120%;
+	padding:5px 5px 5px 5px;
+}
+.timeColor {
+	font-size: 18px;
+	color : #22ab35;
+	text-align : right;
+}
+.welcomeClass {
+	width:80%;
+	height:84%;
+	position:absolute;
+	left:10%;
+	top:8%
+}
+.beginButton{
+	width:40%;
+	position:absolute;
+	left:30%;
+	top: 70%;
+	padding:2px 2px 2px 2px;
+	font-family:"黑体"
+}
+.titleClass{
+	width:100%;
+	height:20%;
+	text-align: center;
+	font-family:"华文行楷";
+	font-size:120%
+}
+.showTitleDiv{
+	width :100%;
+	height:60%;
+}
+.showDiv{
+	width:60%; 
+	position:absolute; 
+	top:20%; 
+	right:18%; 
+	left:18%
+}
+.outputDiv{
+	margin: 10px 10px 10px 8px; 
+	font-family:"华文行楷";
+	font-size:120%;
+}
+.buttonOver{
+	margin: 20px 15px 0px 0px;
+	float:right;
+}
+._buttonOver{
+	margin: 20px 15px 0px 0px;
+	float:right;
+	display:none;
+}

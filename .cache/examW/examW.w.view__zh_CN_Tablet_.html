@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window" component="$model/UI2/system/components/justep/window/window" design="device:mobile" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __justepbasexid__="__baseID__" components="$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/select/radioGroup,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/button/radio,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/output/output,">  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pea019a35283943709b8dd4e35d25014a-iosstatusbar" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}"> 
+    <div class="x-panel-top" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}"> 
+        <div class="x-titlebar-left" xid="div1"/>  
+        <div class="x-titlebar-title" xid="div2"/>  
+        <div class="x-titlebar-right " xid="div3"> 
+          <div class="empty"/> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"> 
+      <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full" xid="contents1" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;active&quot;:0}"> 
+        <div class="x-contents-content active" xid="content2" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}"> 
+          <span component="$model/UI2/system/components/justep/select/radioGroup" class="x-radio-group" xid="radioGroup1" data-bind="component:{name:'$model/UI2/system/components/justep/select/radioGroup'}"> 
+            <span xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/button/radio" class="x-radio" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}">  
+              <input type="radio"/>  
+              <label/> 
+            </span> 
+          </span>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-success btn-only-icon" xid="button5" style="float:right" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button6Click" data-config="{&quot;icon&quot;:&quot;icon-chevron-right&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+            <i xid="i5" class="icon-chevron-right"/>  
+            <span xid="span5"/> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-success btn-only-icon" xid="button3" style="float:left" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button7Click" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+            <i xid="i3" class="icon-chevron-left"/>  
+            <span xid="span3"/> 
+          </a> 
+        </div>  
+        <div class="x-contents-content" xid="content4" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" data-events="onActive:content4Active"> 
+          <span component="$model/UI2/system/components/justep/select/radioGroup" class="x-radio-group" xid="radioGroup3" data-bind="component:{ref:questionData.ref('answer'),name:'$model/UI2/system/components/justep/select/radioGroup'},foreach:{data:nowSelectionData.datas,afterRender:$model.comp($element)['_doUpdate'].bind($model.comp($element))}"> 
+            <span xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/button/radio" class="x-radio" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio',value:ref('answer'),label:ref('answer')}">  
+              <input type="radio"/>  
+              <label/> 
+            </span> 
+          </span>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-success btn-only-icon" xid="button7" style="float:left" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button7Click" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+            <i xid="i7" class="icon-chevron-left"/>  
+            <span xid="span7"/> 
+          </a>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-success btn-only-icon" xid="button6" style="float:right" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button6Click" data-config="{&quot;icon&quot;:&quot;icon-chevron-right&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+            <i xid="i6" class="icon-chevron-right"/>  
+            <span xid="span6"/> 
+          </a>  
+          <div component="$model/UI2/system/components/justep/output/output" class="x-output" xid="output1" data-bind="component:{ref:questionData.ref('answer'),name:'$model/UI2/system/components/justep/output/output'}"/> 
+        </div> 
+      </div> 
+    </div>  
+    <style>.x-panel.pea019a35283943709b8dd4e35d25014a-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pea019a35283943709b8dd4e35d25014a-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pea019a35283943709b8dd4e35d25014a-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pea019a35283943709b8dd4e35d25014a-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pea019a35283943709b8dd4e35d25014a-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pea019a35283943709b8dd4e35d25014a-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pea019a35283943709b8dd4e35d25014a-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div> 
+</div>
