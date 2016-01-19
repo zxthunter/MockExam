@@ -3,7 +3,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window" component="$model/UI2/system/components/justep/window/window" design="device:mobile" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __justepbasexid__="__baseID__" components="$model/UI2/system/components/justep/windowReceiver/windowReceiver,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/output/output," css="$model/UI2/AppTest/checkW.css,">  
   <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}"></div>  
   <span component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver2" style="left:44px;top:56px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiver10Receive"/>  
-  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}"> 
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p2aae84d4c3294ff1bfd5935b8bc7a33d-iosstatusbar" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}"> 
     <div class="x-panel-top" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}">
       <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}"> 
         <div class="x-titlebar-left" xid="div1">
@@ -37,12 +37,16 @@
       <div xid="div5" class="showTitleInnerClass">
         <div component="$model/UI2/system/components/justep/output/output" class="x-output outputClass" xid="output1" data-bind="component:{ref:totalData.ref('viewName'),name:'$model/UI2/system/components/justep/output/output'}"/>
         <div component="$model/UI2/system/components/justep/output/output" class="x-output outputClass" xid="output2" data-bind="component:{ref:totalData.ref('viewScore'),name:'$model/UI2/system/components/justep/output/output'}"/>
-        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default checkButton" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button3Click" data-config="{&quot;label&quot;:&quot;查看试卷&quot;}"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default checkButton" xid="button3" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button3Click" data-config="{&quot;label&quot;:&quot;查看试卷&quot;}"> 
           <i xid="i3"/>  
           <span xid="span3">查看试卷</span>
         </a> 
-      </div>
+      </div>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-lg btn-only-icon loadingClass" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-loading-a&quot;,&quot;label&quot;:&quot;button&quot;}"> 
+        <i xid="i4" class="icon-loading-a"/>  
+        <span xid="span4"/>
+      </a>
     </div>
-    <style>.x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p4869036e13354f5bbfb9d6057cb479cc-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+    <style>.x-panel.p2aae84d4c3294ff1bfd5935b8bc7a33d-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p2aae84d4c3294ff1bfd5935b8bc7a33d-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p2aae84d4c3294ff1bfd5935b8bc7a33d-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p2aae84d4c3294ff1bfd5935b8bc7a33d-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p2aae84d4c3294ff1bfd5935b8bc7a33d-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p2aae84d4c3294ff1bfd5935b8bc7a33d-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p2aae84d4c3294ff1bfd5935b8bc7a33d-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
   </div>
 </div>

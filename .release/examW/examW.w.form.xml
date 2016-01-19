@@ -18,7 +18,7 @@
       </xhtml:div>
     </xhtml:div>
   </span>
-  <span component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver1" style="left:73px;top:42px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiver1Receive"/>  
+  <span component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver1" style="left:61px;top:54px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiver1Receive"/>  
   <span component="$model/UI2/system/components/justep/messageDialog/messageDialog" xid="messageDialog1" style="left:120px;top:16px;" data-bind="component:{name:'$model/UI2/system/components/justep/messageDialog/messageDialog'}" data-events="onYes:messageDialog1Yes" data-config="{&quot;message&quot;:&quot;您确定要交卷？&quot;,&quot;type&quot;:&quot;YesNo&quot;}">
     <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal-overlay"></xhtml:div>
     <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal">
@@ -35,7 +35,7 @@
       </xhtml:div>
     </xhtml:div>
   </span>
-  <div component="$model/UI2/system/components/justep/wing/wing" class="x-wing" xid="wing1" data-bind="component:{name:'$model/UI2/system/components/justep/wing/wing'}" data-config="{&quot;display&quot;:&quot;push&quot;}"> 
+  <div component="$model/UI2/system/components/justep/wing/wing" class="x-wing" xid="wing1" data-bind="component:{name:'$model/UI2/system/components/justep/wing/wing'}" data-config="{&quot;dismissible&quot;:true,&quot;display&quot;:&quot;push&quot;}"> 
     <div class="x-wing-left bg-success" xid="left1" component="$model/UI2/system/components/justep/wing/child" data-bind="component:{name:'$model/UI2/system/components/justep/wing/child'}">
       <div component="$model/UI2/system/components/justep/output/output" class="x-output outputDiv" xid="output7" data-bind="component:{ref:leftData.ref('viewLeftTitle'),name:'$model/UI2/system/components/justep/output/output'}"/>  
       <div component="$model/UI2/system/components/justep/output/output" class="x-output outputDiv" xid="output8" data-bind="component:{ref:leftData.ref('viewLeftTime'),name:'$model/UI2/system/components/justep/output/output'}"/>  
@@ -54,7 +54,7 @@
     </div>  
     <div class="x-wing-content" xid="content1" component="$model/UI2/system/components/justep/wing/child" data-bind="component:{name:'$model/UI2/system/components/justep/wing/child'}"> 
       <div class="x-wing-backdrop" xid="div1"/>  
-      <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p3dc53f0a27ca4c96b7f135e2dec3c637-iosstatusbar" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}"> 
+      <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p5beee855f12b491a983868d19f15ef35-iosstatusbar" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}"> 
         <div class="x-panel-top" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"> 
           <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar bg-success" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}"> 
             <div class="x-full bg-success" xid="div2"> 
@@ -69,7 +69,7 @@
           </div> 
         </div>  
         <div class="x-panel-content" xid="content2" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"> 
-          <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full" xid="contents1" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-events="onActiveChange:contents1ActiveChange" data-config="{&quot;routable&quot;:true,&quot;slidable&quot;:true,&quot;swipe&quot;:false}"> 
+          <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full" xid="contents1" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-events="onActiveChange:contents1ActiveChange" data-config="{&quot;routable&quot;:false,&quot;slidable&quot;:true,&quot;swipe&quot;:false,&quot;wrap&quot;:true}"> 
             <div class="x-contents-content active active" xid="content2" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}"> 
               <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-lg btn-icon-right btn-only-icon" xid="button5" style="position:absolute; top:38%; right:0px; float:right" bind-disable=" $model.questionData.val(&quot;_id&quot;)== $model.totalData.val(&quot;totalQuestionNum&quot;)" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:buttonNext" data-config="{&quot;icon&quot;:&quot;icon-chevron-right&quot;,&quot;label&quot;:&quot;button&quot;}"> 
                 <i xid="i5" class="icon-chevron-right"/>  
@@ -80,8 +80,8 @@
                 <span xid="span3"/> 
               </a>  
               <div xid="div6" class="showDiv"> 
-                <div component="$model/UI2/system/components/justep/output/output" class="x-output" xid="output2" data-bind="component:{ref:questionData.ref('viewQuestion'),name:'$model/UI2/system/components/justep/output/output'}"/>  
-                <span component="$model/UI2/system/components/justep/select/radioGroup" class="x-radio-group" xid="radioGroup1" bind-foreach="{data:nowSelectionData.datas,afterRender:$model.comp($element)['_doUpdate'].bind($model.comp($element))}" data-bind="component:{ref:questionData.ref('answer'),name:'$model/UI2/system/components/justep/select/radioGroup'}">
+                <div component="$model/UI2/system/components/justep/output/output" class="x-output textSize_lg" xid="output2" data-bind="component:{ref:questionData.ref('viewQuestion'),name:'$model/UI2/system/components/justep/output/output'}"/>  
+                <span component="$model/UI2/system/components/justep/select/radioGroup" class="x-radio-group x-radio-group-lg x-radio-group-vertical" xid="radioGroup1" bind-foreach="{data:nowSelectionData.datas,afterRender:$model.comp($element)['_doUpdate'].bind($model.comp($element))}" data-bind="component:{ref:questionData.ref('answer'),name:'$model/UI2/system/components/justep/select/radioGroup'}">
                   <xhtml:span xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/button/radio" class="x-radio" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio',value:ref('_id'),label:ref('answer')}">
                     <xhtml:input type="radio"/>
                     <xhtml:label/>
@@ -99,8 +99,8 @@
                 <span xid="span6"/> 
               </a>  
               <div xid="div7" class="showDiv"> 
-                <div component="$model/UI2/system/components/justep/output/output" class="x-output" xid="output2" data-bind="component:{ref:questionData.ref('viewQuestion'),name:'$model/UI2/system/components/justep/output/output'}"/>  
-                <span component="$model/UI2/system/components/justep/select/radioGroup" class="x-radio-group" xid="radioGroup3" bind-foreach="{data:nowSelectionData.datas,afterRender:$model.comp($element)['_doUpdate'].bind($model.comp($element))}" data-bind="component:{ref:questionData.ref('answer'),name:'$model/UI2/system/components/justep/select/radioGroup'}">
+                <div component="$model/UI2/system/components/justep/output/output" class="x-output textSize_lg" xid="output2" data-bind="component:{ref:questionData.ref('viewQuestion'),name:'$model/UI2/system/components/justep/output/output'}"/>  
+                <span component="$model/UI2/system/components/justep/select/radioGroup" class="x-radio-group x-radio-group-lg x-radio-group-vertical" xid="radioGroup3" bind-foreach="{data:nowSelectionData.datas,afterRender:$model.comp($element)['_doUpdate'].bind($model.comp($element))}" data-bind="component:{ref:questionData.ref('answer'),name:'$model/UI2/system/components/justep/select/radioGroup'}">
                   <xhtml:span xmlns:xhtml="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/button/radio" class="x-radio" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio',value:ref('_id'),label:ref('answer')}">
                     <xhtml:input type="radio"/>
                     <xhtml:label/>
@@ -131,11 +131,11 @@
           </a>  
           <div style="width:100%; height:100px; display:none; overflow:scroll" xid="div5" class="x-scroll-content bg-success"/> 
         </div>  
-        <style>.x-panel.p3dc53f0a27ca4c96b7f135e2dec3c637-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p3dc53f0a27ca4c96b7f135e2dec3c637-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p3dc53f0a27ca4c96b7f135e2dec3c637-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p3dc53f0a27ca4c96b7f135e2dec3c637-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p3dc53f0a27ca4c96b7f135e2dec3c637-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p3dc53f0a27ca4c96b7f135e2dec3c637-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p3dc53f0a27ca4c96b7f135e2dec3c637-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+        <style>.x-panel.p5beee855f12b491a983868d19f15ef35-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p5beee855f12b491a983868d19f15ef35-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p5beee855f12b491a983868d19f15ef35-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p5beee855f12b491a983868d19f15ef35-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p5beee855f12b491a983868d19f15ef35-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p5beee855f12b491a983868d19f15ef35-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p5beee855f12b491a983868d19f15ef35-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
       </div> 
     </div> 
   </div>  
-  <span component="$model/UI2/system/components/justep/messageDialog/messageDialog" xid="messageDialog3" style="left:72px;top:32px;" data-bind="component:{name:'$model/UI2/system/components/justep/messageDialog/messageDialog'}" data-events="onOK:messageDialog3OK" data-config="{&quot;message&quot;:&quot;本次考试还未开始计时，您选择退出考试，这不会浪费考试机会。&quot;,&quot;type&quot;:&quot;OKCancel&quot;}">
+  <span component="$model/UI2/system/components/justep/messageDialog/messageDialog" xid="messageDialog3" style="left:137px;top:36px;" data-bind="component:{name:'$model/UI2/system/components/justep/messageDialog/messageDialog'}" data-events="onOK:messageDialog3OK" data-config="{&quot;message&quot;:&quot;本次考试还未开始计时，您选择退出考试，这不会浪费考试机会。&quot;,&quot;type&quot;:&quot;OKCancel&quot;}">
     <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal-overlay"></xhtml:div>
     <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal">
       <xhtml:div class="x-modal-inner">

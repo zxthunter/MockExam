@@ -13,7 +13,7 @@
       <xhtml:div class="x-dialog-body"/>
     </xhtml:div>
   </span>  
-  <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog2" style="left:137px;top:5px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/AppTest/checkW.w&quot;}">
+  <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog2" style="left:143px;top:34px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;forceRefreshOnOpen&quot;:true,&quot;src&quot;:&quot;$model/UI2/AppTest/checkW.w&quot;}">
     <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay"></xhtml:div>
     <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog" style="display:none;">
       <xhtml:div class="x-dialog-title">
@@ -43,7 +43,7 @@
     </xhtml:div>
   </span>  
   <span component="$model/UI2/system/components/justep/windowReceiver/windowReceiver" xid="windowReceiver1" data-bind="component:{name:'$model/UI2/system/components/justep/windowReceiver/windowReceiver'}" data-events="onReceive:windowReceiver1Receive"/>
-  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pce28aa73c9664a2ab14a8bacf1b349e4-iosstatusbar" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}"> 
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pe520726ada1e47069ad930467e2a5788-iosstatusbar" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}"> 
     <div class="x-panel-top" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"> 
       <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}"> 
         <p xid="p1" class="titleP">
@@ -162,6 +162,6 @@
         <span xid="span11"/>
       </a>
     </div>
-    <style>.x-panel.pce28aa73c9664a2ab14a8bacf1b349e4-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pce28aa73c9664a2ab14a8bacf1b349e4-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pce28aa73c9664a2ab14a8bacf1b349e4-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pce28aa73c9664a2ab14a8bacf1b349e4-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pce28aa73c9664a2ab14a8bacf1b349e4-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pce28aa73c9664a2ab14a8bacf1b349e4-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pce28aa73c9664a2ab14a8bacf1b349e4-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+    <style>.x-panel.pe520726ada1e47069ad930467e2a5788-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pe520726ada1e47069ad930467e2a5788-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pe520726ada1e47069ad930467e2a5788-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pe520726ada1e47069ad930467e2a5788-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pe520726ada1e47069ad930467e2a5788-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pe520726ada1e47069ad930467e2a5788-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pe520726ada1e47069ad930467e2a5788-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
   </div> 
 </div>
